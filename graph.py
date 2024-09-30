@@ -18,6 +18,7 @@ token_max = 1000
 llm = create_llm()
 map_chain = get_map_chain(llm)
 reduce_chain = get_reduce_chain(llm)
+
 def length_function(documents: List[Document]) -> int:
     """Get number of tokens for input contents."""
     return sum(llm.get_num_tokens(doc.page_content) for doc in documents)

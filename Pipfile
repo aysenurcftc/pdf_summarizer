@@ -14,6 +14,7 @@ tiktoken = "*"
 langgraph = "*"
 beautifulsoup4 = "*"
 pdfplumber = "*"
+streamlit = "*"
 
 [dev-packages]
 

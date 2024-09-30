@@ -5,7 +5,7 @@ from langchain import hub
 
 def create_llm(model_name: str = "gpt-3.5-turbo"):
     """Creates an LLM instance with the specified model."""
-    return ChatOpenAI(model=model_name)
+    return ChatOpenAI(model=model_name, max_tokens=500)
 
 def get_map_chain(llm):
     """Creates the map chain for summarization."""
@@ -17,8 +17,8 @@ def get_reduce_chain(llm):
     reduce_template = """
     The following is a set of summaries:
     {docs}
-    Take these and distill it into a final, consolidated summary
-    of the main themes.
+   Please provide a detailed and comprehensive summary of the main points and insights, 
+   including examples, comparisons, and key conclusions.
     """
     reduce_prompt = ChatPromptTemplate([("human", reduce_template)])
     return reduce_prompt | llm | StrOutputParser()
