@@ -1,7 +1,7 @@
 
 # PDF SUMMARIZER
 
-![Alt metin]("img.png")
+![Alt metin](https://github.com/aysenurcftc/pdf_summarizer/blob/main/img.png)
 
 
 ## Environment Variables
